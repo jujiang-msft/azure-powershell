@@ -76,5 +76,4 @@ directive:
   set:
     verb: Set     
     subject: AccountOffline
-
 ```
