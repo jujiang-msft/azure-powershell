@@ -49,4 +49,31 @@ directive:
 - where:
     verb: Set
   remove: true
+
+  # fix per feedback
+- where:
+    verb: Get
+    parameter-name: ResourceName
+  set:
+    parameter-name: Name
+
+- where:
+    verb: Get
+    parameter-name: TestBaseAccountName
+  set:
+    parameter-name: AccountName
+
+- where:
+    verb: Remove
+    subject: PackageHard
+    parameter-name: PackageName
+  set:
+    parameter-name: Name
+ 
+- where:
+    verb: Invoke
+    subject: OffboardTestBaseAccount
+  set:
+    verb: Set     
+    subject: AccountOffline
 ```

@@ -1,6 +1,6 @@
 ---
 Module Name: Az.TestBase
-Module Guid: 04b7d2c5-1072-49f1-b52c-6ad835c863cd
+Module Guid: adf38efe-ede2-4887-a09a-877bcef587b1
 Download Help Link: https://docs.microsoft.com/powershell/module/az.testbase
 Help Version: 1.0.0.0
 Locale: en-US
@@ -65,9 +65,6 @@ Gets a test type of a Test Base Account.
 ### [Get-AzTestBaseUsage](Get-AzTestBaseUsage.md)
 Lists the usage data of a Test Base Account.
 
-### [Invoke-AzTestBaseOffboardTestBaseAccount](Invoke-AzTestBaseOffboardTestBaseAccount.md)
-Offboard a Test Base Account.
-
 ### [New-AzTestBaseAccount](New-AzTestBaseAccount.md)
 Create or replace (overwrite/recreate, with potential downtime) a Test Base Account in the specified subscription.
 
@@ -94,6 +91,9 @@ Deletes a Test Base Package.
 
 ### [Remove-AzTestBasePackageHard](Remove-AzTestBasePackageHard.md)
 Hard Delete a Test Base Package.
+
+### [Set-AzTestBaseAccountOffline](Set-AzTestBaseAccountOffline.md)
+Offboard a Test Base Account.
 
 ### [Test-AzTestBaseAccountPackageNameAvailability](Test-AzTestBaseAccountPackageNameAvailability.md)
 Checks that the Test Base Package name and version is valid and is not already in use.

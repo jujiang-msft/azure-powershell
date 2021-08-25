@@ -1,24 +1,25 @@
 ---
 external help file:
 Module Name: Az.TestBase
-online version: https://docs.microsoft.com/powershell/module/az.testbase/get-aztestbaseusage
+online version: https://docs.microsoft.com/powershell/module/az.testbase/set-aztestbaseaccountoffline
 schema: 2.0.0
 ---
 
-# Get-AzTestBaseUsage
+# Set-AzTestBaseAccountOffline
 
 ## SYNOPSIS
-Lists the usage data of a Test Base Account.
+Offboard a Test Base Account.
 
 ## SYNTAX
 
 ```
-Get-AzTestBaseUsage -AccountName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
- [-Filter <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+Set-AzTestBaseAccountOffline -ResourceGroupName <String> -TestBaseAccountName <String>
+ [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Lists the usage data of a Test Base Account.
+Offboard a Test Base Account.
 
 ## EXAMPLES
 
@@ -42,15 +43,15 @@ PS C:\> {{ Add code here }}
 
 ## PARAMETERS
 
-### -AccountName
-The resource name of the Test Base Account.
+### -AsJob
+Run the command as a job
 
 ```yaml
-Type: System.String
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -72,11 +73,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Filter
-Odata filter
+### -NoWait
+Run the command asynchronously
 
 ```yaml
-Type: System.String
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+Returns true when the command succeeds
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -107,13 +123,59 @@ The Azure subscription ID.
 This is a GUID-formatted string.
 
 ```yaml
-Type: System.String[]
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TestBaseAccountName
+The resource name of the Test Base Account.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -125,7 +187,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.Api20201216Preview.ITestBaseAccountUsageData
+### System.Boolean
 
 ## NOTES
 

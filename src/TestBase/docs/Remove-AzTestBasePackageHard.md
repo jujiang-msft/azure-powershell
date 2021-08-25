@@ -14,7 +14,7 @@ Hard Delete a Test Base Package.
 
 ### Delete (Default)
 ```
-Remove-AzTestBasePackageHard -PackageName <String> -ResourceGroupName <String> -TestBaseAccountName <String>
+Remove-AzTestBasePackageHard -Name <String> -ResourceGroupName <String> -TestBaseAccountName <String>
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -96,6 +96,21 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -Name
+The resource name of the Test Base Package.
+
+```yaml
+Type: System.String
+Parameter Sets: Delete
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NoWait
 Run the command asynchronously
 
@@ -105,21 +120,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PackageName
-The resource name of the Test Base Package.
-
-```yaml
-Type: System.String
-Parameter Sets: Delete
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

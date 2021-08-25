@@ -14,14 +14,14 @@ Gets the file upload URL of a Test Base Account.
 
 ### GetExpanded (Default)
 ```
-Get-AzTestBaseAccountFileUploadUrl -ResourceGroupName <String> -TestBaseAccountName <String>
+Get-AzTestBaseAccountFileUploadUrl -AccountName <String> -ResourceGroupName <String>
  [-SubscriptionId <String[]>] [-BlobName <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Get
 ```
-Get-AzTestBaseAccountFileUploadUrl -ResourceGroupName <String> -TestBaseAccountName <String>
+Get-AzTestBaseAccountFileUploadUrl -AccountName <String> -ResourceGroupName <String>
  -Parameter <IGetFileUploadUrlParameters> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -62,6 +62,21 @@ PS C:\> {{ Add code here }}
 {{ Add description here }}
 
 ## PARAMETERS
+
+### -AccountName
+The resource name of the Test Base Account.
+
+```yaml
+Type: System.String
+Parameter Sets: Get, GetExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -BlobName
 The custom file name of the uploaded blob.
@@ -152,21 +167,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TestBaseAccountName
-The resource name of the Test Base Account.
-
-```yaml
-Type: System.String
-Parameter Sets: Get, GetExpanded
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
