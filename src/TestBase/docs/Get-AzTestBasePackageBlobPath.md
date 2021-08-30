@@ -1,31 +1,44 @@
 ---
 external help file:
 Module Name: Az.TestBase
-online version: https://docs.microsoft.com/powershell/module/az.testbase/remove-aztestbaseaccount
+online version: https://docs.microsoft.com/powershell/module/az.testbase/get-aztestbasepackageblobpath
 schema: 2.0.0
 ---
 
-# Remove-AzTestBaseAccount
+# Get-AzTestBasePackageBlobPath
 
 ## SYNOPSIS
-Offboard a Test Base Account.
+Gets the file upload URL of a Test Base Account.
 
 ## SYNTAX
 
-### Offboard (Default)
+### GetExpanded (Default)
 ```
-Remove-AzTestBaseAccount -AccountName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+Get-AzTestBasePackageBlobPath -AccountName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+ [-BlobName <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### OffboardViaIdentity
+### Get
 ```
-Remove-AzTestBaseAccount -InputObject <ITestBaseIdentity> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+Get-AzTestBasePackageBlobPath -AccountName <String> -ResourceGroupName <String>
+ -Parameter <IGetFileUploadUrlParameters> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### GetViaIdentity
+```
+Get-AzTestBasePackageBlobPath -InputObject <ITestBaseIdentity> -Parameter <IGetFileUploadUrlParameters>
+ [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+### GetViaIdentityExpanded
+```
+Get-AzTestBasePackageBlobPath -InputObject <ITestBaseIdentity> [-BlobName <String>]
+ [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Offboard a Test Base Account.
+Gets the file upload URL of a Test Base Account.
 
 ## EXAMPLES
 
@@ -54,7 +67,7 @@ The resource name of the Test Base Account.
 
 ```yaml
 Type: System.String
-Parameter Sets: Offboard
+Parameter Sets: Get, GetExpanded
 Aliases:
 
 Required: True
@@ -64,12 +77,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Run the command as a job
+### -BlobName
+The custom file name of the uploaded blob.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: GetExpanded, GetViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -100,7 +113,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.ITestBaseIdentity
-Parameter Sets: OffboardViaIdentity
+Parameter Sets: GetViaIdentity, GetViaIdentityExpanded
 Aliases:
 
 Required: True
@@ -110,33 +123,19 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -NoWait
-Run the command asynchronously
+### -Parameter
+The parameters supplied to the Test Base Account GetFileUploadURL action.
+To construct, see NOTES section for PARAMETER properties and create a hash table.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.Api20201216Preview.IGetFileUploadUrlParameters
+Parameter Sets: Get, GetViaIdentity
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PassThru
-Returns true when the command succeeds
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -145,7 +144,7 @@ The name of the resource group that contains the resource.
 
 ```yaml
 Type: System.String
-Parameter Sets: Offboard
+Parameter Sets: Get, GetExpanded
 Aliases:
 
 Required: True
@@ -160,8 +159,8 @@ The Azure subscription ID.
 This is a GUID-formatted string.
 
 ```yaml
-Type: System.String
-Parameter Sets: Offboard
+Type: System.String[]
+Parameter Sets: Get, GetExpanded
 Aliases:
 
 Required: False
@@ -207,11 +206,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.Api20201216Preview.IGetFileUploadUrlParameters
+
 ### Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.ITestBaseIdentity
 
 ## OUTPUTS
 
-### System.Boolean
+### Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.Api20201216Preview.IFileUploadUrlResponse
 
 ## NOTES
 
@@ -238,6 +239,9 @@ INPUTOBJECT <ITestBaseIdentity>: Identity Parameter
   - `[TestResultName <String>]`: The Test Result Name. It equals to {osName}-{TestResultId} string.
   - `[TestSummaryName <String>]`: The name of the Test Summary.
   - `[TestTypeResourceName <String>]`: The resource name of a test type.
+
+PARAMETER <IGetFileUploadUrlParameters>: The parameters supplied to the Test Base Account GetFileUploadURL action.
+  - `[BlobName <String>]`: The custom file name of the uploaded blob.
 
 ## RELATED LINKS
 

@@ -1,34 +1,46 @@
 ---
 external help file:
 Module Name: Az.TestBase
-online version: https://docs.microsoft.com/powershell/module/az.testbase/update-aztestbasepackage
+online version: https://docs.microsoft.com/powershell/module/az.testbase/test-aztestbasepackagename
 schema: 2.0.0
 ---
 
-# Update-AzTestBasePackage
+# Test-AzTestBasePackageName
 
 ## SYNOPSIS
-Update an existing Test Base Package.
+Checks that the Test Base Package name and version is valid and is not already in use.
 
 ## SYNTAX
 
-### UpdateExpanded (Default)
+### CheckExpanded (Default)
 ```
-Update-AzTestBasePackage -AccountName <String> -Name <String> -ResourceGroupName <String>
- [-SubscriptionId <String>] [-BlobPath <String>] [-FlightingRing <String>] [-IsEnabled] [-Tag <Hashtable>]
- [-TargetOSList <ITargetOSInfo[]>] [-Test <ITest[]>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+Test-AzTestBasePackageName -AccountName <String> -ResourceGroupName <String> -ApplicationName <String>
+ -Name <String> -Type <String> -Version <String> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### UpdateViaIdentityExpanded
+### Check
 ```
-Update-AzTestBasePackage -InputObject <ITestBaseIdentity> [-BlobPath <String>] [-FlightingRing <String>]
- [-IsEnabled] [-Tag <Hashtable>] [-TargetOSList <ITargetOSInfo[]>] [-Test <ITest[]>]
- [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
+Test-AzTestBasePackageName -AccountName <String> -ResourceGroupName <String>
+ -Parameter <IPackageCheckNameAvailabilityParameters> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
+ [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+### CheckViaIdentity
+```
+Test-AzTestBasePackageName -InputObject <ITestBaseIdentity>
+ -Parameter <IPackageCheckNameAvailabilityParameters> [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
+```
+
+### CheckViaIdentityExpanded
+```
+Test-AzTestBasePackageName -InputObject <ITestBaseIdentity> -ApplicationName <String> -Name <String>
+ -Type <String> -Version <String> [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Update an existing Test Base Package.
+Checks that the Test Base Package name and version is valid and is not already in use.
 
 ## EXAMPLES
 
@@ -57,7 +69,7 @@ The resource name of the Test Base Account.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded
+Parameter Sets: Check, CheckExpanded
 Aliases:
 
 Required: True
@@ -67,30 +79,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Run the command as a job
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BlobPath
-The file name of the package.
+### -ApplicationName
+Application name to verify.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CheckExpanded, CheckViaIdentityExpanded
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -112,28 +109,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FlightingRing
-The flighting ring for feature update.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InputObject
 Identity Parameter
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.ITestBaseIdentity
-Parameter Sets: UpdateViaIdentityExpanded
+Parameter Sets: CheckViaIdentity, CheckViaIdentityExpanded
 Aliases:
 
 Required: True
@@ -143,29 +125,13 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -IsEnabled
-Specifies whether the package is enabled.
-It doesn't schedule test for package which is not enabled.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
-The resource name of the Test Base Package.
+Resource name to verify.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded
-Aliases: PackageName
+Parameter Sets: CheckExpanded, CheckViaIdentityExpanded
+Aliases:
 
 Required: True
 Position: Named
@@ -174,18 +140,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NoWait
-Run the command asynchronously
+### -Parameter
+Parameters body to pass for Test Base Package name availability check.
+To construct, see NOTES section for PARAMETER properties and create a hash table.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.Api20201216Preview.IPackageCheckNameAvailabilityParameters
+Parameter Sets: Check, CheckViaIdentity
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -194,7 +161,7 @@ The name of the resource group that contains the resource.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded
+Parameter Sets: Check, CheckExpanded
 Aliases:
 
 Required: True
@@ -210,7 +177,7 @@ This is a GUID-formatted string.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded
+Parameter Sets: Check, CheckExpanded
 Aliases:
 
 Required: False
@@ -220,47 +187,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tag
-The tags of the Package.
+### -Type
+fully qualified resource type which includes provider namespace.
 
 ```yaml
-Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CheckExpanded, CheckViaIdentityExpanded
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TargetOSList
-Specifies the target OSs of specific OS Update types.
-To construct, see NOTES section for TARGETOSLIST properties and create a hash table.
+### -Version
+Version name to verify.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.Api20201216Preview.ITargetOSInfo[]
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CheckExpanded, CheckViaIdentityExpanded
 Aliases:
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Test
-The detailed test information.
-To construct, see NOTES section for TEST properties and create a hash table.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.Api20201216Preview.ITest[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -303,11 +253,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.Api20201216Preview.IPackageCheckNameAvailabilityParameters
+
 ### Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.ITestBaseIdentity
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.Api20201216Preview.IPackageResource
+### Microsoft.Azure.PowerShell.Cmdlets.TestBase.Models.Api20201216Preview.ICheckNameAvailabilityResult
 
 ## NOTES
 
@@ -335,24 +287,11 @@ INPUTOBJECT <ITestBaseIdentity>: Identity Parameter
   - `[TestSummaryName <String>]`: The name of the Test Summary.
   - `[TestTypeResourceName <String>]`: The resource name of a test type.
 
-TARGETOSLIST <ITargetOSInfo[]>: Specifies the target OSs of specific OS Update types.
-  - `OSUpdateType <String>`: Specifies the OS update type to test against, e.g., 'Security updates' or 'Feature updates'.
-  - `TargetOSs <String[]>`: Specifies the target OSs to be tested.
-
-TEST <ITest[]>: The detailed test information.
-  - `Command <ICommand[]>`: The commands used in the test.
-    - `Action <Action>`: The action of the command.
-    - `Content <String>`: The content of the command. The content depends on source type.
-    - `ContentType <ContentType>`: The type of command content.
-    - `Name <String>`: The name of the command.
-    - `[AlwaysRun <Boolean?>]`: Specifies whether to run the command even if a previous command is failed.
-    - `[ApplyUpdateBefore <Boolean?>]`: Specifies whether to apply update before the command.
-    - `[MaxRunTime <Int32?>]`: Specifies the max run time of the command.
-    - `[RestartAfter <Boolean?>]`: Specifies whether to restart the VM after the command executed.
-    - `[RunAsInteractive <Boolean?>]`: Specifies whether to run the command in interactive mode.
-    - `[RunElevated <Boolean?>]`: Specifies whether to run the command as administrator.
-  - `Type <TestType>`: The type of the test.
-  - `[IsActive <Boolean?>]`: Indicates if this test is active.It doesn't schedule test for not active Test.
+PARAMETER <IPackageCheckNameAvailabilityParameters>: Parameters body to pass for Test Base Package name availability check.
+  - `ApplicationName <String>`: Application name to verify.
+  - `Name <String>`: Resource name to verify.
+  - `Type <String>`: fully qualified resource type which includes provider namespace.
+  - `Version <String>`: Version name to verify.
 
 ## RELATED LINKS
 
