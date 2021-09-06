@@ -1,18 +1,21 @@
-### Example 1: {{ Add title here }}
+### Example 1: Update an existing Test Base Account
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Update-AzTestBaseAccount -Name "TESTBASEACCOUNT_KAIFA" -ResourceGroupName "testbase_rg"  -Tag @{test="test0906"}
+
+Etag Location Name                  Type                                AzureAsyncOperation
+---- -------- ----                  ----                                -------------------
+     global   TESTBASEACCOUNT_KAIFA microsoft.testbase/testbaseaccounts
+
+```
+
+Update an existing Test Base Account.
+
+### Example 2: Update an existing Test Base Account
+```powershell
+PS C:\> Update-AzTestBaseAccount -InputObject <ITestBaseIdentity>
 
 {{ Add output here }}
 ```
 
-{{ Add description here }}
-
-### Example 2: {{ Add title here }}
-```powershell
-PS C:\> {{ Add code here }}
-
-{{ Add output here }}
-```
-
-{{ Add description here }}
+Update an existing Test Base Account.
 

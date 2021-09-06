@@ -1,18 +1,25 @@
-### Example 1: {{ Add title here }}
+### Example 1: Gets a test type of a Test Base Account
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Get-AzTestBaseTestType -AccountName "testBaseAccount_kaifa" -Name "Out-of-Box-Test" -ResourceGroupName "testbase_rg"
 
-{{ Add output here }}
+Name            Type
+----            ----
+Out-of-Box-Test
+
 ```
 
-{{ Add description here }}
+Gets a test type of a Test Base Account.
 
-### Example 2: {{ Add title here }}
+### Example 2: Get a List of TestTypes
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Get-AzTestBaseTestType -AccountName "testBaseAccount_kaifa" -ResourceGroupName "testbase_rg"
 
-{{ Add output here }}
+Name            Type
+----            ----
+Out-of-Box-Test
+Functional-Test
+
 ```
 
-{{ Add description here }}
+Get a List of TestTypes.
 

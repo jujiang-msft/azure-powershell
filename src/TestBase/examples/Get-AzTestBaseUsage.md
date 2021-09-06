@@ -1,11 +1,14 @@
-### Example 1: {{ Add title here }}
+### Example 1: Lists the usage data of a Test Base Account
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Get-AzTestBaseUsage -AccountName "testBaseAccount_kaifa" -ResourceGroupName "testbase_rg"
 
-{{ Add output here }}
+CurrentValue Limit Unit
+------------ ----- ----
+
+
 ```
 
-{{ Add description here }}
+Lists the usage data of a Test Base Account.
 
 ### Example 2: {{ Add title here }}
 ```powershell

@@ -1,18 +1,33 @@
-### Example 1: {{ Add title here }}
+### Example 1: Gets a Test Base CustomerEvent
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Get-AzTestBaseCustomerEvent -AccountName "testBaseAccount_kaifa" -Name "testbase6336_event" -ResourceGroupName "testbase_rg"  
 
-{{ Add output here }}
+Name               Type AzureAsyncOperation
+----               ---- -------------------
+testbase6336_event
+
 ```
 
-{{ Add description here }}
+Gets a Test Base CustomerEvent.
 
-### Example 2: {{ Add title here }}
+### Example 2: Get a List of CustomerEvents
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Get-AzTestBaseCustomerEvent -AccountName "testBaseAccount_kaifa" -ResourceGroupName "testbase_rg" 
 
-{{ Add output here }}
+Name                Type AzureAsyncOperation
+----                ---- -------------------
+testbase6336_event
+testbase2303_event
+testbase9379_event
+testbase2062_event
+testbase5139_event
+testbase3963_event
+testbase1499_event
+testbase9406_event
+testbase5219_event
+InitialVerification
+
 ```
 
-{{ Add description here }}
+Get a List of CustomerEvents.
 

@@ -1,11 +1,11 @@
-### Example 1: {{ Add title here }}
+### Example 1: Create or replace a favorite process for a Test Base Package
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> New-AzTestBaseFavoriteProcess -AccountName "testBaseAccount_kaifa" -PackageName "package2_kaifa-1.0" -ResourceGroupName "testbase_rg" -ResourceName "favoriteProcess0902_test"
 
 {{ Add output here }}
 ```
 
-{{ Add description here }}
+Create or replace a favorite process for a Test Base Package.
 
 ### Example 2: {{ Add title here }}
 ```powershell

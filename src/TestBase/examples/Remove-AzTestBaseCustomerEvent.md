@@ -1,18 +1,18 @@
-### Example 1: {{ Add title here }}
+### Example 1: Deletes a Test Base Customer Event
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Remove-AzTestBaseCustomerEvent -AccountName "testBaseAccount_kaifa" -Name "testbase9869_event" -ResourceGroupName "testbase_rg"
 
 {{ Add output here }}
 ```
 
-{{ Add description here }}
+Deletes a Test Base Customer Event.
 
-### Example 2: {{ Add title here }}
+### Example 2: Deletes a Test Base Customer Event
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Remove-AzTestBaseCustomerEvent -InputObject <ITestBaseIdentity>
 
 {{ Add output here }}
 ```
 
-{{ Add description here }}
+Deletes a Test Base Customer Event.
 

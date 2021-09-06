@@ -1,18 +1,26 @@
-### Example 1: {{ Add title here }}
+### Example 1: Gets a email event of a Test Base Account
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Get-AzTestBaseEmailEvent -AccountName "testBaseAccount_kaifa" -Name "InitialVerification" -ResourceGroupName "testbase_rg"
 
-{{ Add output here }}
+Name                Type
+----                ----
+InitialVerification
+
 ```
 
-{{ Add description here }}
+Gets a email event of a Test Base Account.
 
-### Example 2: {{ Add title here }}
+### Example 2: Get a List of EmailEvents
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Get-AzTestBaseEmailEvent -AccountName "testBaseAccount_kaifa" -ResourceGroupName "testbase_rg"
 
-{{ Add output here }}
+Name                Type
+----                ----
+InitialVerification
+TestFailures
+FreeHourUsage
+
 ```
 
-{{ Add description here }}
+Get a List of EmailEvents.
 

@@ -1,11 +1,14 @@
-### Example 1: {{ Add title here }}
+### Example 1: Lists the available SKUs of Test Base Account in a subscription
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Get-AzTestBaseSku
 
-{{ Add output here }}
+Location Name ResourceType     Tier
+-------- ---- ------------     ----
+{global} S0   testBaseAccounts Standard
+
 ```
 
-{{ Add description here }}
+Lists the available SKUs of Test Base Account in a subscription.
 
 ### Example 2: {{ Add title here }}
 ```powershell

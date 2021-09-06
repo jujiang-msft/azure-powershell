@@ -1,18 +1,29 @@
-### Example 1: {{ Add title here }}
+### Example 1: Gets a favorite process for a Test Base Package
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Get-AzTestBaseFavoriteProcess -AccountName "testBaseAccount_kaifa" -Name "testbase8713_favProcess" -PackageName "package2_kaifa-1.0" -ResourceGroupName "testbase_rg"
 
-{{ Add output here }}
+Name Type
+---- ----
+
+
 ```
 
-{{ Add description here }}
+Gets a favorite process for a Test Base Package.
 
-### Example 2: {{ Add title here }}
+### Example 2: Get a List of FavoriteProcesses
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Get-AzTestBaseFavoriteProcess -AccountName "testBaseAccount_kaifa" -PackageName "package2_kaifa-1.0" -ResourceGroupName "testbase_rg"
 
-{{ Add output here }}
+Name Type
+---- ----
+
+
+
+
+
+
+
 ```
 
-{{ Add description here }}
+Get a List of FavoriteProcesses.
 

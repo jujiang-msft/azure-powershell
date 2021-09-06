@@ -1,18 +1,24 @@
-### Example 1: {{ Add title here }}
+### Example 1: Gets a flighting ring of a Test Base Account
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Get-AzTestBaseFlightingRing -AccountName "testBaseAccount_kaifa" -Name "Insider-Beta-Channel" -ResourceGroupName "testbase_rg"
 
-{{ Add output here }}
+Name                 Type
+----                 ----
+Insider-Beta-Channel
+
 ```
 
-{{ Add description here }}
+Gets a flighting ring of a Test Base Account
 
-### Example 2: {{ Add title here }}
+### Example 2: Get a List of FlightingRings
 ```powershell
-PS C:\> {{ Add code here }}
+PS C:\> Get-AzTestBaseFlightingRing -AccountName "testBaseAccount_kaifa" -ResourceGroupName "testbase_rg" 
 
-{{ Add output here }}
+Name                 Type
+----                 ----
+Insider-Beta-Channel
+
 ```
 
-{{ Add description here }}
+Get a List of FlightingRings.
 

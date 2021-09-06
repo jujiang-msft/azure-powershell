@@ -1,0 +1,8 @@
+{
+  "SubscriptionId": "9fabf001-9c1f-4aab-9451-e431da271956",
+  "Tenant": "f686d426-8d16-42db-81b7-ab578e110ccd",
+  "ResourceGroup":"testbase_rg",
+  "TestBaseAccount":"testBaseAccount_kaifa",
+  "Package":"package2_kaifa-1.0",
+  "TestPrefix":"testbase"
+}
