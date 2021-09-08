@@ -12,9 +12,13 @@ Gets the download URL of the test result.
 
 ### Example 2: Gets the download URL of the test result
 ```powershell
-PS C:\> Get-AzTestBaseTestResultDownloadUrl -InputObject <ITestBaseIdentity>
+PS C:\> $inputObjs=@{SubscriptionId="9fabf001-9c1f-4aab-9451-e431da271956";ResourceGroupName="testbase_rg";TestBaseAccountName="testBaseAccount_kaifa";PackageName="package2_kaifa-1.0";TestResultName="TestResult-eb31eaf8-cfa7-4595-a96a-05c38c3db51f"}
+Get-AzTestBaseTestResultDownloadUrl -InputObject $inputObjs 
 
-{{ Add output here }}
+DownloadUrl
+-----------
+https://tbintelportalppe.blob.core.windows.net/zips/c0097881-16f2-4c2a-b6f1-1e2c7d7cb8e7/eb31eaf8-cfa7-45…
+
 ```
 
 Gets the download URL of the test result.

@@ -9,9 +9,11 @@ Deletes a Test Base Account.
 
 ### Example 2: Deletes a Test Base Account
 ```powershell
-PS C:\> Remove-AzTestBaseAccount -InputObject <ITestBaseIdentity>
+PS C:\> $inputObjs=@{SubscriptionId="9fabf001-9c1f-4aab-9451-e431da271956";ResourceGroupName="testbase_rg";TestBaseAccountName="testBaseAccount9493"}
+Remove-AzTestBaseAccount -InputObject $inputObjs
 
-{{ Add output here }}
+
+The operation succeeded, but no result is returned.
 ```
 
 Deletes a Test Base Account.

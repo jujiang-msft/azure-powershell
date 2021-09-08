@@ -1,6 +1,6 @@
 ### Example 1: Gets the file upload URL of a package
 ```powershell
-PS C:\> Get-AzTestBasePackageBlobPath -AccountName "testBaseAccount_kaifa" -ResourceGroupName "testbase_rg"
+PS C:\> Get-AzTestBasePackageBlobPath -AccountName "testBaseAccount_kaifa" -ResourceGroupName "testbase_rg" -FileName "test.zip"
 
 {{ Add output here }}
 ```

@@ -11,9 +11,13 @@ Gets the download URL of a package.
 
 ### Example 2: Gets the download URL of a package
 ```powershell
-PS C:\> Get-AzTestBasePackageDownloadUrl -InputObject <ITestBaseIdentity>
+PS C:\> $inputObjs=@{SubscriptionId="9fabf001-9c1f-4aab-9451-e431da271956";ResourceGroupName="testbase_rg";TestBaseAccountName="testBaseAccount_kaifa";PackageName="package2_kaifa-1.0"}
+Get-AzTestBasePackageDownloadUrl -InputObject $inputObjs
 
-{{ Add output here }}
+DownloadUrl
+-----------
+https://tbwestusppesa.blob.core.windows.net/c0097881-16f2-4c2a-b6f1-1e2c7d7cb8e7/prod/97fc8542-091d-45be-…
+
 ```
 
 Gets the download URL of a package.
