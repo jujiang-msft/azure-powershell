@@ -1,6 +1,6 @@
 ### Example 1: Deletes a favorite process for a specific package
 ```powershell
-PS C:\> Remove-AzTestBaseFavoriteProcess -AccountName "testBaseAccount_kaifa" -PackageName "package2_kaifa-1.0" -ResourceGroupName "testbase_rg" -ResourceName "TestBaseFavoriteProcess9863" 
+PS C:\> Remove-AzTestBaseFavoriteProcess -AccountName "testBaseAccount_kaifa" -PackageName "package2_kaifa-1.0" -ResourceGroupName "testbase_rg" -ResourceName "TestBaseFavoriteProcess9863"
 
 The operation succeeded, but no result was returned.
 ```

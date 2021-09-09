@@ -1,6 +1,6 @@
 ### Example 1: Deletes a Test Base Customer Event
 ```powershell
-PS C:\> Remove-AzTestBaseCustomerEvent -AccountName "testBaseAccount_kaifa" -Name "TestBaseCustomerEvent3103" -ResourceGroupName "testbase_rg" 
+PS C:\> Remove-AzTestBaseCustomerEvent -AccountName "testBaseAccount_kaifa" -Name "TestBaseCustomerEvent3103" -ResourceGroupName "testbase_rg"
 
 {{ Add output here }}
 ```
