@@ -1,15 +1,15 @@
 ### Example 1: Deletes a Test Base Account
 ```powershell
-PS C:\> Remove-AzTestBaseAccount -AccountName "testBaseAccount0902_test" -ResourceGroupName "testbase_rg"
+PS C:\> Remove-AzTestBaseAccount -AccountName "ContosoAccount" -ResourceGroupName "ContosoRG"
 
-No result is returned from this operation.
+The operation succeeded, but no result is returned.
 ```
 
 Deletes a Test Base Account.
 
 ### Example 2: Deletes a Test Base Account
 ```powershell
-PS C:\> $inputObjs=@{SubscriptionId="9fabf001-9c1f-4aab-9451-e431da271956";ResourceGroupName="testbase_rg";TestBaseAccountName="testBaseAccount9493"}
+PS C:\> $inputObjs=@{SubscriptionId="9fabf001-9c1f-4aab-9451-e431da271956";ResourceGroupName="ContosoRG";TestBaseAccountName="ContosoAccount"}
 Remove-AzTestBaseAccount -InputObject $inputObjs
 
 

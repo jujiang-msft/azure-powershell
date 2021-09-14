@@ -1,6 +1,6 @@
 ### Example 1: Get the Test Result by Id with specified OS Update type for a Test Base Package
 ```powershell
-PS C:\> Get-AzTestBaseTestResult -AccountName "testBaseAccount_kaifa" -Name "TestResult-eb31eaf8-cfa7-4595-a96a-05c38c3db51f" -PackageName "package2_kaifa-1.0"  -ResourceGroupName "testbase_rg"
+PS C:\> Get-AzTestBaseTestResult -AccountName "ContosoAccount" -Name "TestResult-eb31eaf8-cfa7-4595-a96a-05c38c3db51f" -PackageName "ContosoPackage"  -ResourceGroupName "ContosoRG"
 
 Name                                            Type
 ----                                            ----
@@ -12,7 +12,7 @@ Get the Test Result by Id with specified OS Update type for a Test Base Package.
 
 ### Example 2: Get a List of TestResults
 ```powershell
-PS C:\> Get-AzTestBaseTestResult -AccountName "testBaseAccount_kaifa" -PackageName "package2_kaifa-1.0"  -ResourceGroupName "testbase_rg" -OSUpdateType "SecurityUpdate" -Filter "osName eq 'Windows 10 21H1' and releaseName eq '2021.05 B' and buildRevision eq '985'"
+PS C:\> Get-AzTestBaseTestResult -AccountName "ContosoAccount" -PackageName "ContosoPackage"  -ResourceGroupName "ContosoRG" -OSUpdateType "SecurityUpdate" -Filter "osName eq 'Windows 10 21H1' and releaseName eq '2021.05 B' and buildRevision eq '985'"
 
 Name                                            Type
 ----                                            ----

@@ -1,6 +1,6 @@
 ### Example 1: Gets an available OS to run a package under a Test Base Account.
 ```powershell
-PS C:\> Get-AzTestBaseAvailableOS -AccountName "testBaseAccount_kaifa" -Name "Windows-10-21H1-FeatureUpdate" -ResourceGroupName "testbase_rg"
+PS C:\> Get-AzTestBaseAvailableOS -AccountName "ContosoAccount" -Name "Windows-10-21H1-FeatureUpdate" -ResourceGroupName "ContosoRG"
 
 Name                          Type
 ----                          ----
@@ -12,7 +12,7 @@ Gets an available OS to run a package under a Test Base Account.
 
 ### Example 2: Get a List of AvailableOSs
 ```powershell
-PS C:\> Get-AzTestBaseAvailableOS -AccountName "testBaseAccount_kaifa" -ResourceGroupName "testbase_rg" -OSUpdateType "SecurityUpdate"
+PS C:\> Get-AzTestBaseAvailableOS -AccountName "ContosoAccount" -ResourceGroupName "ContosoRG" -OSUpdateType "SecurityUpdate"
 
 Name                                            Type
 ----                                            ----

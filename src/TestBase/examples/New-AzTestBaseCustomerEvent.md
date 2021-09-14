@@ -1,8 +1,8 @@
 ### Example 1: Create or replace a Test Base Customer Event
 ```powershell
-PS C:\> $userObjId=@("test1","test2")   
-PS C:\> $receiver=${ReceiverType="UserObjects";ReceiverValueUserObjectReceiverValue=$userObjId}
-PS C:\> New-AzTestBaseCustomerEvent -AccountName "testBaseAccount_kaifa" -Name "testbase0908_event" -ResourceGroupName "testbase_rg" -Receiver $receiver -EventName "initial-verification"
+PS C:\> $userObjId=@("2d52b4d4-3a12-4230-b3c3-f68ca3bb272e")   
+$receiver=@{ReceiverType="UserObjects";ReceiverValueUserObjectReceiverValue=$userObjId}
+New-AzTestBaseCustomerEvent -AccountName "testBaseAccount_kaifa" -Name "testbase0914_event" -ResourceGroupName "testbase_rg" -Receiver $receiver -EventName "initial-verification"
 
 {{ Add output here }}
 ```

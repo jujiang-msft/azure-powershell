@@ -1,6 +1,6 @@
 ### Example 1: Gets a test type of a Test Base Account
 ```powershell
-PS C:\> Get-AzTestBaseTestType -AccountName "testBaseAccount_kaifa" -Name "Out-of-Box-Test" -ResourceGroupName "testbase_rg"
+PS C:\> Get-AzTestBaseTestType -AccountName "ContosoAccount" -Name "Out-of-Box-Test" -ResourceGroupName "ContosoRG"
 
 Name            Type
 ----            ----
@@ -12,7 +12,7 @@ Gets a test type of a Test Base Account.
 
 ### Example 2: Get a List of TestTypes
 ```powershell
-PS C:\> Get-AzTestBaseTestType -AccountName "testBaseAccount_kaifa" -ResourceGroupName "testbase_rg"
+PS C:\> Get-AzTestBaseTestType -AccountName "ContosoAccount" -ResourceGroupName "ContosoRG"
 
 Name            Type
 ----            ----

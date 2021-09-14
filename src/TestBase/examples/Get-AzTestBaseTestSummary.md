@@ -1,6 +1,6 @@
 ### Example 1: Gets a Test Summary with specific name from all the Test Summaries of all the packages under a Test Base Account
 ```powershell
-PS C:\> Get-AzTestBaseTestSummary -AccountName "testBaseAccount_kaifa" -Name "TestSummary-fd550cae-fe50-3cd9-bf95-4e51be898883" -ResourceGroupName "testbase_rg"
+PS C:\> Get-AzTestBaseTestSummary -AccountName "ContosoAccount" -Name "TestSummary-fd550cae-fe50-3cd9-bf95-4e51be898883" -ResourceGroupName "ContosoRG"
 
 Name                                             Type
 ----                                             ----
@@ -12,7 +12,7 @@ Gets a Test Summary with specific name from all the Test Summaries of all the pa
 
 ### Example 2: Get a List of Test Summaries
 ```powershell
-PS C:\> Get-AzTestBaseTestSummary -AccountName "testBaseAccount_kaifa" -ResourceGroupName "testbase_rg"
+PS C:\> Get-AzTestBaseTestSummary -AccountName "ContosoAccount" -ResourceGroupName "ContosoRG"
 
 Name                                             Type
 ----                                             ----

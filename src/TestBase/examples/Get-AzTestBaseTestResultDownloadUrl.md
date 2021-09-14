@@ -1,6 +1,6 @@
 ### Example 1: Gets the download URL of the test result
 ```powershell
-PS C:\> Get-AzTestBaseTestResultDownloadUrl -AccountName "testBaseAccount_kaifa" -PackageName "package2_kaifa-1.0" -ResourceGroupName "testbase_rg" -TestResultName "TestResult-eb31eaf8-cfa7-4595-a96a-05c38c3db51f"
+PS C:\> Get-AzTestBaseTestResultDownloadUrl -AccountName "ContosoAccount" -PackageName "ContosoPackage" -ResourceGroupName "ContosoRG" -TestResultName "TestResult-eb31eaf8-cfa7-4595-a96a-05c38c3db51f"
 
 DownloadUrl
 -----------
@@ -12,7 +12,7 @@ Gets the download URL of the test result.
 
 ### Example 2: Gets the download URL of the test result
 ```powershell
-PS C:\> $inputObjs=@{SubscriptionId="9fabf001-9c1f-4aab-9451-e431da271956";ResourceGroupName="testbase_rg";TestBaseAccountName="testBaseAccount_kaifa";PackageName="package2_kaifa-1.0";TestResultName="TestResult-eb31eaf8-cfa7-4595-a96a-05c38c3db51f"}
+PS C:\> $inputObjs=@{SubscriptionId="9fabf001-9c1f-4aab-9451-e431da271956";ResourceGroupName="ContosoRG";TestBaseAccountName="ContosoAccount";PackageName="ContosoPackage";TestResultName="TestResult-eb31eaf8-cfa7-4595-a96a-05c38c3db51f"}
 Get-AzTestBaseTestResultDownloadUrl -InputObject $inputObjs 
 
 DownloadUrl

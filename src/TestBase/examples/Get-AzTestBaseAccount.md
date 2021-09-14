@@ -23,11 +23,11 @@ Obtain the TestBaseAccount list based on the subscriptionID, and use the getDele
 
 ### Example 2: Get a TestBaseAccount
 ```powershell
-PS C:\> Get-AzTestBaseAccount -Name "testBaseAccount_kaifa" -ResourceGroupName "testbase_rg"
+PS C:\> Get-AzTestBaseAccount -Name "ContosoAccount" -ResourceGroupName "ContosoRG"
 
 Etag Location Name                  Type                                AzureAsyncOperation
 ---- -------- ----                  ----                                -------------------
-     global   TESTBASEACCOUNT_KAIFA microsoft.testbase/testbaseaccounts
+     global   ContosoAccount microsoft.testbase/testbaseaccounts
 
 ```
 

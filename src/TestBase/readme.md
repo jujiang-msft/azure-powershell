@@ -36,7 +36,7 @@ require:
 # lock the commit
 input-file:
 #   - $(this-folder)/testbase.json
-  - $(repo)/specification/testbase/resource-manager/Microsoft.TestBase/preview/2020-12-16-preview/testbase.json
+  - E:\Repos\azure-rest-api-specs-pr/specification/testbase/resource-manager/Microsoft.TestBase/preview/2020-12-16-preview/testbase.json
 
 module-version: 0.1.0
 title: TestBase
@@ -54,12 +54,12 @@ directive:
   - where:
       verb: Remove
       subject: TestBaseAccount
-    hide: true
+    remove: true
 
   - where:
       verb: Remove
       subject: Package
-    hide: true
+    remove: true
 
   - where:
       parameter-name: TestBaseAccountName 
@@ -105,5 +105,14 @@ directive:
       subject: TestBaseAccountPackageNameAvailability
     set:
       subject: TestBasePackageName
+
+  - where:
+      verb: Test
+      subject: TestBasePackageName
+      parameter-name: Type
+    hide: true
+    set:
+      default:
+        script: '"Microsoft.TestBase/testBaseAccounts/packages"'
 
 ```
