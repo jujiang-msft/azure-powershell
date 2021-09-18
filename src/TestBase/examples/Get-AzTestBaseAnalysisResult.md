@@ -1,8 +1,11 @@
 ### Example 1: Gets an Analysis Result of a Test Result by name.
 ```powershell
-PS C:\> Get-AzTestBaseAnalysisResult -AccountName "testBaseAccount_kaifa" -Name "" -PackageName "package2_kaifa-1.0" -ResourceGroupName "testbase_rg" -TestResultName "TestResult-8ea496b3-04bf-4a3d-a370-87d12c22a333"
+PS C:\> Get-AzTestBaseAnalysisResult -AccountName "ContosoAccount" -Name "" -PackageName "ContosoPackage-Version" -ResourceGroupName "ContosoRG" -TestResultName "Windows-10-1909-99b1f80d-03a9-4148-997f-806ba5bac8e0"
 
-{{ Add output here }}
+Name            Type
+----            ----
+
+
 ```
 
 Gets an Analysis Result of a Test Result by name.
